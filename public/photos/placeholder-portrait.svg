@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder portrait</title>
+  <desc id="desc">A generic standing figure near a window. Replace this file with a real photograph.</desc>
+  <rect width="1200" height="800" fill="#eadfd0"/>
+  <rect x="80" y="70" width="420" height="520" fill="#d7c4a8"/>
+  <rect x="110" y="100" width="360" height="280" fill="#c9d4d8"/>
+  <rect x="110" y="100" width="360" height="280" fill="none" stroke="#b7a48a" stroke-width="10"/>
+  <circle cx="760" cy="300" r="118" fill="#c4a888"/>
+  <path d="M560 800 C560 560 960 560 960 800 Z" fill="#b99373"/>
+  <text x="600" y="64" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#6d6358">Placeholder photo — replace me</text>
+</svg>

@@ -1,0 +1,244 @@
+---
+import "../styles/global.css";
+import { site } from "../data/site";
+
+const hasContact =
+  Boolean(site.contact.email) ||
+  Boolean(site.contact.phone) ||
+  site.contact.mailingAddressLines.length > 0 ||
+  site.contact.social.length > 0;
+
+const helpLinks = [site.help.donation, site.help.petition].filter(
+  (link): link is NonNullable<typeof link> => Boolean(link),
+);
+---
+
+<!doctype html>
+<html lang={site.language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={site.metaDescription} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{site.pageTitle}</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,560;9..144,600&family=Source+Sans+3:ital,wght@0,400;0,600;0,650;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="#top">{site.name}</a>
+        <nav aria-label="Page sections">
+          <ul class="nav-list">
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#articles">News</a></li>
+            <li><a href="#gallery">Photos</a></li>
+            <li><a href="#help">How to help</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="person-name">
+        <div class="hero-inner">
+          <p class="eyebrow">A family advocacy page</p>
+          <h1 id="person-name">{site.name}</h1>
+          <p class="lede">{site.summary}</p>
+          <a class="button" href={site.hero.ctaHref}>{site.hero.ctaLabel}</a>
+        </div>
+      </section>
+
+      <section class="section" id="timeline" aria-labelledby="timeline-heading">
+        <div class="section-inner">
+          <h2 id="timeline-heading">Timeline</h2>
+          {
+            site.timeline.length > 0 ? (
+              <ol class="timeline">
+                {site.timeline.map((entry) => (
+                  <li>
+                    <time>{entry.date}</time>
+                    <h3>{entry.title}</h3>
+                    <p>{entry.description}</p>
+                  </li>
+                ))}
+              </ol>
+            ) : (
+              <p>No timeline entries have been added yet.</p>
+            )
+          }
+        </div>
+      </section>
+
+      <section class="section" id="articles" aria-labelledby="articles-heading">
+        <div class="section-inner">
+          <h2 id="articles-heading">News &amp; Articles</h2>
+          {
+            site.articles.length > 0 ? (
+              <div class="article-list">
+                {site.articles.map((article) => (
+                  <article class="article">
+                    <p class="article-meta">
+                      <span class="outlet">{article.outlet}</span>
+                      <time>{article.date}</time>
+                    </p>
+                    <h3>
+                      <a
+                        href={article.url}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        {article.title}
+                        <span class="external-hint"> (opens in a new tab)</span>
+                      </a>
+                    </h3>
+                    <p>{article.excerpt}</p>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <p>No articles have been added yet.</p>
+            )
+          }
+        </div>
+      </section>
+
+      <section class="section" id="gallery" aria-labelledby="gallery-heading">
+        <div class="section-inner">
+          <h2 id="gallery-heading">Photo Gallery</h2>
+          {
+            site.photos.length > 0 ? (
+              <div class="gallery">
+                {site.photos.map((photo) => (
+                  <figure>
+                    <img src={photo.src} alt={photo.alt} loading="lazy" />
+                    {photo.caption ? <figcaption>{photo.caption}</figcaption> : null}
+                  </figure>
+                ))}
+              </div>
+            ) : (
+              <p>No photos have been added yet.</p>
+            )
+          }
+        </div>
+      </section>
+
+      <section class="section" id="help" aria-labelledby="help-heading">
+        <div class="section-inner">
+          <h2 id="help-heading">How to Help / Contact</h2>
+          <div class="help-grid">
+            <div>
+              <p class="section-intro">{site.help.intro}</p>
+              {
+                helpLinks.length > 0 ? (
+                  <div class="button-row">
+                    {helpLinks.map((link, index) => (
+                      <a
+                        class={index === 0 ? "button" : "button button-secondary"}
+                        href={link.url}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                      >
+                        {link.label}
+                        <span class="external-hint"> (opens in a new tab)</span>
+                      </a>
+                    ))}
+                  </div>
+                ) : null
+              }
+            </div>
+
+            {
+              hasContact ? (
+                <div>
+                  <h3 class="visually-hidden">Contact</h3>
+                  <dl class="contact-list">
+                    {site.contact.email ? (
+                      <div>
+                        <dt>Email</dt>
+                        <dd>
+                          <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+                        </dd>
+                      </div>
+                    ) : null}
+                    {site.contact.phone ? (
+                      <div>
+                        <dt>Phone</dt>
+                        <dd>
+                          <a href={`tel:${site.contact.phone.replace(/[^\d+]/g, "")}`}>
+                            {site.contact.phone}
+                          </a>
+                        </dd>
+                      </div>
+                    ) : null}
+                    {site.contact.mailingAddressLines.length > 0 ? (
+                      <div>
+                        <dt>Mailing address</dt>
+                        <dd>
+                          <address class="address">
+                            {site.contact.mailingAddressLines.join("\n")}
+                          </address>
+                        </dd>
+                      </div>
+                    ) : null}
+                    {site.contact.social.length > 0 ? (
+                      <div>
+                        <dt>Social</dt>
+                        <dd>
+                          <ul class="social-list">
+                            {site.contact.social.map((item) => (
+                              <li>
+                                <a
+                                  href={item.url}
+                                  rel="noopener noreferrer"
+                                  target="_blank"
+                                >
+                                  {item.label}
+                                  <span class="external-hint"> (opens in a new tab)</span>
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </dd>
+                      </div>
+                    ) : null}
+                  </dl>
+                </div>
+              ) : null
+            }
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>
+          This page was created by {site.name}&apos;s family and supporters. Please
+          share only information that has been made public here.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>

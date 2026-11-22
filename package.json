@@ -1,0 +1,16 @@
+{
+  "name": "advocacy-page-template",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "A minimal Astro template for a personal advocacy page with a timeline, news, photo gallery, and contact section.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^7.4.13"
+  }
+}
