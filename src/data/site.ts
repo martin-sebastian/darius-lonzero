@@ -97,7 +97,7 @@ export const site: SiteContent = {
         "The Wanczura family made their home in Lafayette, Indiana, where they live today.",
     },
     {
-      date: "2026 (approx.)",
+      date: "May 2026",
       title: "Detained by ICE",
       description:
         "Darius is held by U.S. Immigration and Customs Enforcement at Miami Correctional Facility in Bunker Hill, Indiana, and faces deportation.",
