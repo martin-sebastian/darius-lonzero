@@ -63,18 +63,18 @@ export type SiteContent = {
 
 export const site: SiteContent = {
   // The person this page is about. Used in the header, hero, and footer.
-  name: "Jane Doe",
+  name: "Darius Vanchura",
 
   // Browser tab title and default social share title.
-  pageTitle: "Support Jane Doe",
+  pageTitle: "Support Darius Vanchura",
 
   // One-line summary shown under the name in the hero.
   summary:
-    "A family is seeking support, fair treatment, and a path home for Jane Doe.",
+    "A family is seeking support, fair treatment, and a path home for Darius Vanchura.",
 
   // Short description used by search engines and link previews.
   metaDescription:
-    "Learn Jane Doe's story, read recent coverage, and find ways to help.",
+    "Learn Darius Vanchura's story, read recent coverage, and find ways to help.",
 
   language: "en",
 

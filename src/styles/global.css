@@ -154,6 +154,16 @@ a:hover {
 .hero {
   padding: 4.5rem 0 3.5rem;
   border-bottom: 1px solid var(--line);
+  /* Banner photo with a dark overlay so the header text stays readable. */
+  background:
+    linear-gradient(rgb(20 18 15 / 0.55), rgb(20 18 15 / 0.78)),
+    url("/photos/darius.jpg") center 30% / cover no-repeat;
+  color: #fffaf6;
+}
+
+.hero .eyebrow,
+.hero .lede {
+  color: rgb(255 250 246 / 0.9);
 }
 
 .hero-inner {
