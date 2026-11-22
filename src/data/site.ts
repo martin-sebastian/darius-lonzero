@@ -25,11 +25,6 @@ export type Photo = {
   caption: string;
 };
 
-export type SocialLink = {
-  label: string;
-  url: string;
-};
-
 export type HelpLink = {
   label: string;
   url: string;
@@ -52,7 +47,6 @@ export type SiteContent = {
     email: string;
     phone: string;
     mailingAddressLines: string[];
-    social: SocialLink[];
   };
   help: {
     intro: string;
@@ -215,18 +209,15 @@ export const site: SiteContent = {
   ],
 
   // Use example or consented contact details only. Set a field to an empty
-  // string to hide it. Leave `social` as an empty array to hide that list.
+  // string to hide it.
   contact: {
-    email: "family@example.com",
-    phone: "+1 555 555 0100",
+    email: "mirkaw944@icloud.com",
+    phone: "+1 (765) 714-7058",
     mailingAddressLines: [
-      "123 Main Street",
-      "Anytown, ST 00000",
+      "Mirka Wanczura",
+      "2540 Lafayette Dr",
+      "Lafayette, IN 47909-2444",
       "United States",
-    ],
-    social: [
-      { label: "Updates on X", url: "https://example.com/updates" },
-      { label: "Facebook page", url: "https://example.com/facebook" },
     ],
   },
 

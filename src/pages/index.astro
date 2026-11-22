@@ -5,8 +5,7 @@ import { site } from "../data/site";
 const hasContact =
   Boolean(site.contact.email) ||
   Boolean(site.contact.phone) ||
-  site.contact.mailingAddressLines.length > 0 ||
-  site.contact.social.length > 0;
+  site.contact.mailingAddressLines.length > 0;
 
 const helpLinks = [site.help.donation, site.help.petition].filter(
   (link): link is NonNullable<typeof link> => Boolean(link),
@@ -185,27 +184,6 @@ const helpLinks = [site.help.donation, site.help.petition].filter(
                           <address class="address">
                             {site.contact.mailingAddressLines.join("\n")}
                           </address>
-                        </dd>
-                      </div>
-                    ) : null}
-                    {site.contact.social.length > 0 ? (
-                      <div>
-                        <dt>Social</dt>
-                        <dd>
-                          <ul class="social-list">
-                            {site.contact.social.map((item) => (
-                              <li>
-                                <a
-                                  href={item.url}
-                                  rel="noopener noreferrer"
-                                  target="_blank"
-                                >
-                                  {item.label}
-                                  <span class="external-hint"> (opens in a new tab)</span>
-                                </a>
-                              </li>
-                            ))}
-                          </ul>
                         </dd>
                       </div>
                     ) : null}
