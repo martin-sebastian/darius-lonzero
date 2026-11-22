@@ -85,13 +85,13 @@ export const site: SiteContent = {
   // phone numbers, emails) or medical details.
   timeline: [
     {
-      date: "Date approximate",
+      date: "1984",
       title: "Arrives from Poland",
       description:
-        "Darius immigrated to the United States from Poland at age 14.",
+        "Darius comes to the United States from Poland at age 14.",
     },
     {
-      date: "Date approximate",
+      date: "1985",
       title: "Family settles in Lafayette, Indiana",
       description:
         "The Wanczura family made their home in Lafayette, Indiana, where they live today.",
