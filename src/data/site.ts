@@ -198,19 +198,19 @@ export const site: SiteContent = {
   // Photo files belong in /public/photos and are referenced from the site root.
   photos: [
     {
-      src: "/photos/placeholder-portrait.svg",
-      alt: "Placeholder portrait of a person standing near a window",
-      caption: "Replace this placeholder with a photo you have permission to share.",
+      src: "/photos/darius.jpg",
+      alt: "Darius",
+      caption: "Darius",
     },
     {
-      src: "/photos/placeholder-community.svg",
-      alt: "Placeholder illustration of people gathered in support",
-      caption: "A community gathering. Add your own caption and image.",
+      src: "/photos/darius-with-sister.jpg",
+      alt: "Darius with his sister",
+      caption: "Darius with his sister",
     },
     {
-      src: "/photos/placeholder-letters.svg",
-      alt: "Placeholder illustration of letters and documents on a table",
-      caption: "Letters of support. Do not publish confidential case documents.",
+      src: "/photos/darius-with-father-and-sister.jpg",
+      alt: "Darius with his father and sister",
+      caption: "Darius with his father and sister",
     },
   ],
 
