@@ -109,6 +109,12 @@ export const site: SiteContent = {
         "A federal class-action lawsuit, Vasenin v. DHS (N.D. Ind.), was filed on behalf of ICE detainees held at Miami Correctional Facility.",
     },
     {
+      date: "November 2026",
+      title: "More than six months in ICE custody",
+      description:
+        "Darius has now been held in ICE custody for more than six months.",
+    },
+    {
       date: "November 22, 2026",
       title: "Mother writes to the consulate and the ACLU",
       description:
