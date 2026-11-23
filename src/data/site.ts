@@ -104,25 +104,25 @@ export const site: SiteContent = {
     },
     {
       date: "1995",
-      title: "Works at Factory",
+      title: "Work",
       description:
         "Darius works at a factory in Lafayette",
     },
     {
       date: "2000",
-      title: "Works at Factory",
+      title: "Work",
       description:
         "Darius works at another factory in Lafayette",
     },
     {
       date: "2005",
-      title: "Works at Factory",
+      title: "Work",
       description:
         "Darius works at yet another factory in Lafayette",
     },
     {
       date: "2010",
-      title: "Works as Laborer",
+      title: "Work",
       description:
         "Darius works at a construction job in Lafayette",
     },
