@@ -64,7 +64,7 @@ export const site: SiteContent = {
 
   // One-line summary shown under the name in the hero.
   summary:
-    "A family is seeking support, fair treatment, and a path home for Darius Vanchura.",
+    "A family is seeking support, fair treatment, and a path home for Darius.",
 
   // Short description used by search engines and link previews.
   metaDescription:
