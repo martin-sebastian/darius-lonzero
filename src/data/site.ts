@@ -85,16 +85,64 @@ export const site: SiteContent = {
   // phone numbers, emails) or medical details.
   timeline: [
     {
-      date: "1984",
+      date: "August 1984",
       title: "Arrives from Poland",
       description:
         "Darius comes to the United States from Poland at age 14.",
     },
     {
-      date: "1985",
+      date: "June 1985",
       title: "Family settles in Lafayette, Indiana",
       description:
         "The Wanczura family made their home in Lafayette, Indiana, where they live today.",
+    },
+    {
+      date: "1989",
+      title: "Darusz Maciej Graduates High School",
+      description:
+        "Darius went to West Lafayette High School from 9th grade to 12th grade",
+    },
+    {
+      date: "1995",
+      title: "Works at Factory",
+      description:
+        "Darius works at a factory in Lafayette",
+    },
+    {
+      date: "2000",
+      title: "Works at Factory",
+      description:
+        "Darius works at another factory in Lafayette",
+    },
+    {
+      date: "2005",
+      title: "Works at Factory",
+      description:
+        "Darius works at yet another factory in Lafayette",
+    },
+    {
+      date: "2010",
+      title: "Works as Laborer",
+      description:
+        "Darius works at a construction job in Lafayette",
+    },
+    {
+      date: "2015",
+      title: "Work",
+      description:
+        "Darius works at another factory in Lafayette",
+    },
+    {
+      date: "2018",
+      title: "Legal Trouble",
+      description:
+        "Darius gets a huge sentance for drug possession related issues. No legal help",
+    },
+    {
+      date: "2023",
+      title: "Legal Trouble Follows",
+      description:
+        "Darius get another huge sentence and is now fully pulled into the legal system with no money, mo legal representaion",
     },
     {
       date: "May 2026",
@@ -118,7 +166,7 @@ export const site: SiteContent = {
       date: "November 22, 2026",
       title: "Mother writes to the consulate and the ACLU",
       description:
-        "His mother, Mirka Wanczura, wrote and signed letters to the Polish Consulate in Chicago and the ACLU of Indiana, which were sent on November 22, 2026.",
+        "His mother, Mirka Wanczura, wrote and signed letters to the Polish Consulate in Chicago and the ACLU of Indiana, seeking any information or help.",
     },
   ],
 
