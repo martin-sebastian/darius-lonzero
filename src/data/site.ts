@@ -232,11 +232,11 @@ export const site: SiteContent = {
       "If you would like to help, start with the options below. Please share only information that the family has made public.",
     donation: {
       label: "Contribute to legal funds",
-      url: "https://example.com/donate",
+      url: "https://gofund.me/b1d2d4409",
     },
     petition: {
       label: "Sign the petition",
-      url: "https://example.com/petition",
+      url: "https://gofund.me/b1d2d4409",
     },
   },
 };
